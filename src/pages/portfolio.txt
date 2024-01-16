@@ -1,0 +1,65 @@
+import * as React from "react"
+import { Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
+import Layout from "../components/layout"
+import "bootstrap/dist/css/bootstrap.min.css"
+
+const SecondPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulPortfolio {
+        edges {
+          node {
+            title
+            description {
+              description
+            }
+            image {
+              gatsbyImage(width: 1200)
+            }
+            slug
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <Layout>
+      <div className="container text-center">
+        <h1>My Portfolio</h1>
+        <p>Check out my previous work</p>
+        <div className="row custom-card-container">
+          {data.allContentfulPortfolio.edges.map(edge => {
+            return (
+              <div className="col-md-4 mb-4" key={edge.node.id}>
+                <Link to={`/portfolio/${edge.node.slug}`} className="theLinks">
+                  <div className="card h-100 custom-card">
+                    <GatsbyImage
+                      alt={edge.node.title}
+                      image={edge.node.image.gatsbyImage}
+                      className="card-img-top"
+                      style={{ height: "200px" }}
+                    />
+                    <div className="card-body d-flex flex-column">
+                      <h2 className="card-title">{edge.node.title}</h2>
+                      <p className="card-text">
+                        {edge.node.description.description}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            )
+          })}
+        </div>
+        <Link to="/">Go back to the homepage</Link>
+      </div>
+    </Layout>
+  )
+}
+
+export const Head = () => <title>Portfolio Page</title>
+
+export default SecondPage

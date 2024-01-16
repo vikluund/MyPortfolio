@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+/* font-family: 'Jost', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Teko', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Teko", sans-serif;
+  background-color: white;
+  /* background-color: rgb(34, 34, 34); */
+  color: black;
+}
+
+.custom-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+  max-width: none;
+  padding: 0;
+  border-bottom: 3px solid black;
+  /* margin-bottom: 5vh; */
+}
+
+.header-icon img {
+  /* display: inline-block; */
+  height: auto;
+  width: 3vw;
+  margin-left: 2vw;
+  /* box-shadow: 0 2px 0 rgba(39, 197, 237, 0.2); */
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 2vw;
+  margin-left: 3vw;
+  padding: 0.5rem 1rem;
+  color: black;
+  /* color: rgb(39, 197, 237); */
+}
+
+.nav-item:active {
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  text-shadow: 0 0 20px rgba(15, 176, 216, 0.8);
+}
+
+li {
+  list-style: none;
+}
+
+.theLinks {
+  text-decoration: none;
+}
+
+.HomeWrap {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.contentWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 999;
+  background: none;
+}
+
+.contentWrapper h1 {
+  background: none;
+  font-size: 5rem;
+  color: black;
+  font-family: "Pacifico", cursive;
+}
+
+.contentWrapper p {
+  background: none;
+  font-size: 3.5rem;
+  color: black;
+  font-family: "Pacifico", cursive;
+}
+
+.heroImage {
+  width: 60vw;
+  height: auto;
+}
+
+.heroPortfolio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.portfolioImage {
+  width: 300px;
+  height: auto;
+  margin-left: -74vw;
+  margin-top: -15vh;
+}
+
+.contentImage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 8vw;
+}
+
+.contentImage img {
+  margin-left: 2vw;
+  width: 100px;
+  height: auto;
+  transform: rotate(110deg) scaleY(-1);
+  margin-top: 15vh;
+  /* filter: hue-rotate(20deg); */
+}
+
+h2.card-title {
+  color: rgb(39, 197, 237);
+}
+
+.card {
+  border: 2px solid red;
+  /* box-shadow: 0 0 5px rgba(39, 197, 237, 0.5); */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(15, 176, 216, 0.8), 0 0 50px rgba(15, 176, 216, 0.4);
+  transform: scale(1.1);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.allitems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.portfolioitem {
+  background-color: rgb(194, 178, 178);
+}
+
+.custom-footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  /* background-color: rgb(34, 34, 34); */
+}
+
+.custom-card-container .custom-card {
+  border: 4px solid black;
+}
+
+.top-content {
+  margin-bottom: 15vh;
+  margin-top: 5vh;
+}
+
+.custom-content {
+  font-size: 3rem;
+  margin-top: 4vh;
+}
+
+/*404 page*/
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.stickyWrapper {
+  position: relative;
+  text-align: center;
+}
+
+.stickyText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5em;
+  background: none;
+}
+
+.stickyNote {
+  max-width: 400px;
+  height: auto;
+}
+
+/*Contact page*/
+
+.contact-template {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-header {
+  margin-bottom: 10px;
+}
+
+.contact-content {
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: none;
+  background-color: none;
+}
+
+.contact-image {
+  max-width: 100%; /* Adjust the maximum width of the image */
+}
