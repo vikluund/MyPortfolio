@@ -70,14 +70,16 @@ const PortfolioTemplate = ({ title, content, image }) => {
                   <picture>
                     {/* Generating <source> elements for different image resolutions */}
                     <source
-                      srcSet={node.image.gatsbyImageData.images.sources.map(
+                      srcSet={node.image?.gatsbyImageData?.images?.sources?.map(
                         source => source.srcSet
                       )}
-                      sizes={node.image.gatsbyImageData.images.sources.map(
+                      sizes={node.image?.gatsbyImageData?.images?.sources?.map(
                         source =>
                           `(max-width: ${source.sizes.width}px) ${source.sizes.width}px`
                       )}
-                      type={node.image.gatsbyImageData.images.sources[0].type}
+                      type={
+                        node.image?.gatsbyImageData?.images?.sources[0]?.type
+                      }
                     />
                     {/* Displaying the fallback image for browsers that don't support <picture> */}
                     <img
