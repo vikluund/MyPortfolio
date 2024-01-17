@@ -83,11 +83,13 @@ const PortfolioTemplate = ({ title, content, image }) => {
                     />
                     {/* Displaying the fallback image for browsers that don't support <picture> */}
                     <img
-                      src={node.image.gatsbyImageData.images.fallback.src}
+                      src={
+                        node.image?.gatsbyImageData?.images?.fallback?.src || ""
+                      }
                       alt={node.title}
                       className="card-img-top"
                       style={{
-                        aspectRatio: node.image.gatsbyImage.aspectRatio,
+                        aspectRatio: node.image?.gatsbyImage?.aspectRatio,
                       }}
                     />
                   </picture>
