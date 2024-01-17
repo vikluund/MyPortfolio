@@ -11,8 +11,8 @@ const HomeTemplate = ({ title, content, image }) => {
         {content &&
           content.raw &&
           documentToReactComponents(JSON.parse(content.raw))}
-        <Link to="/portfolio">
-          <button className="theButton">Go to Portfolio</button>
+        <Link to="/">
+          <button className="theButton">Take me Home!</button>
         </Link>
       </div>
       {image && image.gatsbyImageData && (

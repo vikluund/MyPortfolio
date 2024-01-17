@@ -7,20 +7,20 @@ const ContactForm = () => {
     message: "",
   })
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault()
     console.log("Form submitted:", formData)
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="theForm">
       <label>
         Name:
         <input
@@ -50,7 +50,9 @@ const ContactForm = () => {
           required
         />
       </label>
-      <button type="submit">Submit</button>
+      <button type="submit" className="theButton">
+        Submit
+      </button>
     </form>
   )
 }

@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Sticky from "../images/stickynote.png"
 
-//i dev mode overridas denna sida av en inbyggd 404-sida
 const NotFoundPage = () => (
   <Layout>
     <div className="not-found">
